@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Destination Input -->
+    <EditText
+        android:id="@+id/edtDestination"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Destination"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+
+    <!-- Mode Selector -->
+    <Spinner
+        android:id="@+id/spinnerMode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edtDestination"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- ETA Display -->
+    <TextView
+        android:id="@+id/txtETA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estimated Time: --"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/spinnerMode"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
+    <!-- Risk Display -->
+    <TextView
+        android:id="@+id/txtRisk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Destination Risk: --"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/txtETA"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
+    <!-- Countdown Display -->
+    <TextView
+        android:id="@+id/txtCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Countdown: --"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/txtRisk"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/btnStartJourney"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Start Journey"
+        app:layout_constraintTop_toBottomOf="@id/txtCountdown"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/btnStopJourney"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Stop"
+        app:layout_constraintTop_toBottomOf="@id/btnStartJourney"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/btnSOS"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="EMERGENCY SOS"
+        android:backgroundTint="#D32F2F"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/btnStopJourney"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/btnSOS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
