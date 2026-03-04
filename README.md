@@ -71,6 +71,9 @@ Team Members
 1.  Rifa mariyam
 2.  pavithra k
 
+Demo video
+Demo video link:https://drive.google.com/file/d/1KTfgxEjOOaXEXtl3DJ2HnfydRK7YI1Lb/view?usp=drivesdk
+
 GitHub Repository
 
 Repository Link: https://github.com/rifaamariyam/safejourney.git
